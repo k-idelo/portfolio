@@ -73,6 +73,8 @@
       padding: 12px 16px;
       border-radius: 8px;
     }
+    .btn + .btn { margin-top: 0; }
+    .btn-outline { background: transparent; color: var(--accent); border: 2px solid var(--accent); padding: 10px 16px; }
     .btn:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
     .sub { font-size: 13px; color: var(--muted); text-decoration: underline; text-align: center; }
     footer { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 13px; color: var(--muted); }
@@ -115,6 +117,7 @@
         </ul>
         <ul class="tags"><li>Google Apps Script</li><li>スプレッドシート</li><li>治療院・サロン</li></ul>
         <a class="btn" href="02-seitai/">サイトを見る</a>
+        <a class="btn btn-outline" href="https://youtu.be/QsVzM7MjuGA" target="_blank" rel="noopener">予約が自動で動くデモ動画（1分半）</a>
         <a class="sub" href="02-seitai/gas/Code.js">予約管理のコードを見る</a>
       </div>
     </article>
