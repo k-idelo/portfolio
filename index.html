@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IDELO 制作サンプル</title>
+  <meta name="description" content="IDELOによるWeb制作・業務自動化の制作サンプル集です。">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --text: #1f2328;
+      --muted: #5c6370;
+      --line: #e3e1db;
+      --accent: #2f5d50;
+      --tag-bg: #eef2f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16181b;
+        --surface: #1f2226;
+        --text: #e8e6e1;
+        --muted: #a3a8b0;
+        --line: #33373d;
+        --accent: #8cc2b0;
+        --tag-bg: #26302d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Noto Sans JP", system-ui, sans-serif;
+      line-height: 1.8;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    header { padding: 64px 0 32px; }
+    .logo { font-size: 14px; letter-spacing: .3em; font-weight: 700; color: var(--accent); margin: 0 0 12px; }
+    h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.4; margin: 0 0 16px; }
+    .lead { color: var(--muted); margin: 0; max-width: 40em; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; padding: 16px 0 48px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .swatch { height: 120px; display: flex; align-items: flex-end; padding: 16px 20px; color: #fff; font-weight: 700; font-size: 18px; }
+    .sw-1 { background: linear-gradient(135deg, #1d2a4d 0%, #2c3e6b 70%, #b8963e 100%); }
+    .sw-2 { background: linear-gradient(135deg, #4f6b4a 0%, #6f8f63 60%, #c27a56 100%); }
+    .body { padding: 20px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .num { font-size: 12px; color: var(--muted); letter-spacing: .1em; margin: 0; }
+    h2 { font-size: 18px; margin: 0; line-height: 1.5; }
+    .body p { margin: 0; color: var(--muted); font-size: 15px; }
+    ul.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+    ul.tags li { background: var(--tag-bg); color: var(--accent); font-size: 12px; padding: 2px 10px; border-radius: 999px; }
+    .points { margin: 0; padding-left: 1.2em; font-size: 14px; color: var(--text); }
+    .btn {
+      margin-top: auto;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      background: var(--accent);
+      color: var(--surface);
+      font-weight: 700;
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+    .btn:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+    .sub { font-size: 13px; color: var(--muted); text-decoration: underline; text-align: center; }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <p class="logo">IDELO</p>
+    <h1>小さな事業者のための<br>Web制作・業務自動化 制作サンプル</h1>
+    <p class="lead">掲載している事務所・院名・人物・住所・料金・お客さまの声は、すべて架空の制作サンプルです。</p>
+  </header>
+
+  <main class="wrap grid">
+    <article class="card">
+      <div class="swatch sw-1">あかり行政書士事務所</div>
+      <div class="body">
+        <p class="num">SAMPLE 01</p>
+        <h2>士業事務所のホームページ</h2>
+        <p>「相談しにくい」「料金が分からない」という不安を減らし、問い合わせにつなげる1ページ構成のサイトです。</p>
+        <ul class="points">
+          <li>業務内容と料金の目安を一覧で掲載</li>
+          <li>ご相談の流れ・よくある質問</li>
+          <li>入力チェックつきのお問い合わせフォーム</li>
+        </ul>
+        <ul class="tags"><li>HTML/CSS/JS</li><li>レスポンシブ</li><li>士業</li></ul>
+        <a class="btn" href="01-gyoseishoshi/">サイトを見る</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="swatch sw-2">こもれび整体院</div>
+      <div class="body">
+        <p class="num">SAMPLE 02</p>
+        <h2>整体院のサイト＋予約管理の自動化</h2>
+        <p>24時間のWEB予約をGoogleスプレッドシートに自動で記録し、確認メールと前日のリマインドまで自動で送ります。</p>
+        <ul class="points">
+          <li>重複予約・定休日・営業時間外を自動でお断り</li>
+          <li>予約確認・新規予約の通知・前日リマインドのメール</li>
+          <li>月額費用0円（Googleアカウントのみ）</li>
+        </ul>
+        <ul class="tags"><li>Google Apps Script</li><li>スプレッドシート</li><li>治療院・サロン</li></ul>
+        <a class="btn" href="02-seitai/">サイトを見る</a>
+        <a class="sub" href="02-seitai/gas/Code.js">予約管理のコードを見る</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="wrap">
+    <p>※公開中のサンプルの予約・問い合わせフォームはデモ表示のみで、実際には送信されません。</p>
+    <p>© IDELO</p>
+  </footer>
+</body>
+</html>
